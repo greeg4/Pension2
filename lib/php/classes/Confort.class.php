@@ -11,7 +11,7 @@
  *
  * @author Limath
  */
-class Accueil {
+class Confort {
     private $_attribute=array();
     
     public function __construct($data) {
