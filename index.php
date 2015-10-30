@@ -9,7 +9,6 @@ session_start();
 <html>
     <head>
         <title>Pet-Sitting - Bienvenue</title>
-        <link rel="stylesheet" type="text/css" href="./lib/css/p_style.css"/>
         <link rel="stylesheet" type="text/css" href="./admin/lib/css/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="./admin/lib/css/bootstrap-3.3.5-dist/css/bootstrap-theme.min.css"/>
         <!-- -link des fichiers css non bootstrap -->
@@ -40,16 +39,18 @@ session_start();
         <section id="main">
             <div class="container">
                 <?php
-                //inclusion des fichiers du dossier ./pages
-                if(!isset($_SESSION['page'])){
-                    $_SESSION['page']="accueil";
+                if(!isset($_SESSION['page'])) {
+                    $_SESSION['page'] = "accueil";
                 }
-                if(isset($_GET['page'])){
-                    $_SESSION['page']=$_GET['page'];
+                if(isset($_GET['page'])) {
+                    $_SESSION['page'] = $_GET['page'];
                 }
-                $chemin='./pages/'.$_SESSION['page'].'.php';
-                if(file_exists(('chemin.php'))){
-                    include ('chemin');
+                $chemin = './pages/' . $_SESSION['page'] . '.php';
+                if(file_exists($chemin)) {
+                    include($chemin);
+                }
+                if(file_exists('chemin.php')) {
+                    include('chemin.php');
                 }
                 ?>  
             </div>

@@ -1,76 +1,8 @@
-/* CSS partie public */
+/*PC de bureau*/
+@import url("style_pc.css") only screen and (min-width:760px);
 
-#image{
-	background-image:url(../../images/banniere_pc.jpg);
-	background-repeat:no-repeat; /* image s'affiche une seule fois */
-	
-	/*<img src="./images/banniereFE.jpg" alt="Banniere"/>	*/
-}
+/*Tableau*/
+@import url("style_tablette.css") only screen and (min-width:321px) and (max-width:759px);
 
-
-header img {
-	width:100%;	
-}
-
-#page {
-	margin:0 auto; 
-	width:90%;
-	max-width:850px; /* taille du header */
-	min-width:760px;
-}
-		
-header {
-	margin:0 auto; 
-        text-align:center;
-	max-width:850px;
-}
-
-.img_header {
-	background-image:url(../../images/banniere_pc.jpg) ;
-	display:block;
-	height:200px;
-	width:1000px;
-	background-repeat:no-repeat;
-}
-
-/*.img_header {
-	background-image:url(../../images/banniere_mob.jpg) ;
-	display:block;
-	height:50px;
-	width:100px;
-	background-repeat:no-repeat;
-}*/
-
-/*.img_header {
-	background-image:url(../../images/banniere_tab.jpg) ;
-	display:block;
-	height:100px;
-	width:500px;
-	background-repeat:no-repeat;
-}*/		
-
-.bottomLine {
-	border-bottom-style:solid;
-	border-bottom-color:#CCC;
-	border-bottom-width:0.07em;
-}
-
-#menu a {
-	text-decoration:none; 
-}
-#menu a:hover{
-	color:white;
-	background-color:blue;	
-}
-.txtGras {
-	font-weight:bold;
-}	
-#main {
-	padding-left:1%;
-	padding-right:1%;
-	width:80%;
-	display:inline-block;
-	font-size:120%;
-}
-
-	
+/*Mobile*/
+@import url("style_mobile.css") only screen and (max-width:320px);
