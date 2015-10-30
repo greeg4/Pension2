@@ -17,7 +17,14 @@ class AccueilDB extends Accueil {
             print $e->getMessage();
         }
 
-		//stockage des données du resulyset dans le tableau $_accueilArray
+        while($data=$resultset->fetch()){
+            try{
+                $_accueilArray[]=new Accueil($data);
+            } catch (PDOException $e) {
+                print $e->getMessage();
+            }
+        }
+        return $_accueilArray;
            
     }
   
